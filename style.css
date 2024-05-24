@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: "silkscreen", sans-serif;
+  color: white;
+  background-color: black;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 10rem; */
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: column;
+}
+
+.left {
+  text-align: left;
+  flex: 1; /* Allow it to grow and shrink as needed */
+  max-width: 52rem; /* Maximum width for left section */
+}
+
+.right {
+  font-family: "JetBrains Mono";
+  border: 1px solid white; /* Added 'solid' to make border visible */
+  border-radius: 12px;
+  background-color: #181717;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  flex: 1; /* Allow it to grow and shrink as needed */
+  max-width: 30rem; /* Maximum width for right section */
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 40px;
+}
+
+.between {
+  font-size: 2rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-family: "JetBrains Mono";
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  border-radius: 40px;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  border-radius: 40px;
+}
+
+.check {
+  width: 25rem;
+  border-radius: 40px;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+  body {
+    padding: 1rem;
+  }
+
+  header {
+    height: 50vh;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+  }
+
+  .left,
+  .right {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .left {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right {
+    max-width: 30rem; /* Further reduced maximum width for smaller screens */
+    max-height: 20rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-top: 3.5rem; /* Reduced padding for bett    font-size: 1.2rem; /* Further reduced font size for better readability */
+  }
+
+  .guess {
+    width: 100%;
+    max-width: 20rem;
+    font-size: 3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .check {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .number {
+    font-size: 4rem;
+    width: 10rem;
+    padding: 2rem 0;
+  }
+
+  .between {
+    font-size: 1.2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .again {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .message {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for even smaller screens */
+  h1 {
+    font-size: 3rem;
+  }
+
+  .right {
+    max-width: 20rem; /* Further reduced maximum width for smaller screens */
+    max-height: 15rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0.5rem; /* Reduced padding for bett    font-size: 1.2rem; /* Further reduced font size for better readability */
+  }
+
+  .number {
+    font-size: 3rem;
+    width: 8rem;
+    padding: 1.5rem 0;
+  }
+
+  .guess {
+    font-size: 2rem;
+    padding: 0.5rem;
+    max-width: 15rem;
+  }
+
+  .check {
+    max-width: 15rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+}
